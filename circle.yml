@@ -3,6 +3,9 @@ machine:
     version: openjdk7
   environment:
     ANDROID_HOME: /usr/local/android-sdk-linux
+    // CIのメモリ制限に引っかかるためOptionでメモリを使いすぎないようにしてます。
+    JAVA_OPTS: "-Xmx1048m -XX:MaxPermSize=512m"　
+    
   dependencies:
     override:
     - echo y | android update sdk --no-ui --filter "android-23,build-tools-23.0.1"
@@ -11,6 +14,6 @@ machine:
     - echo "Nothing to do here"
   deployment:
     master:
-    branch: master
-    commands:
-     - ./gradlew assembleRelease
+      branch: master
+      commands:
+       - ./gradlew assembleRelease
