@@ -3,6 +3,7 @@ machine:
     version: openjdk7
   environment:
     ANDROID_HOME: /usr/local/android-sdk-linux
+    // これを設定しないと落ちる
     JAVA_OPTS: "-Xmx1048m -XX:MaxPermSize=512m"
 
   dependencies:
