@@ -21,4 +21,4 @@ machine:
     master:
       branch: master
       commands:
-       - ./gradlew assembleRelease
+       - bundle exec fastlane beta
