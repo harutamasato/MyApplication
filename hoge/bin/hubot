@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+npm install
+export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
+
+export HUBOT_HIPCHAT_JID="537875_3574753@chat.hipchat.com"
+export HUBOT_HIPCHAT_PASSWORD="Zaq12wsx"
+
+
+
+exec node_modules/.bin/hubot --name "hoge" "$@"
+
