@@ -8,6 +8,8 @@ machine:
   dependencies:
     pre:
       - npm install coffeescript # install from a different package manager
+    override:
+      - bundle install: # note ':' here
 #  dependencies:
 #    pre:
 #      - echo y | android update sdk --no-ui --filter android-23,build-tools-23.0.1
@@ -15,12 +17,12 @@ machine:
 #    override:
 #      - ./gradlew dependencies
 
-  test:
-    override:
-    - ./gradlew test
+#  test:
+#    override:
+#    - ./gradlew test
 
   deployment:
     staging:
-      branch: master
+#      branch: master
 # commands:
 #       - bundle exec fastlane beta
