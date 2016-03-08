@@ -5,22 +5,22 @@ machine:
     ANDROID_HOME: /usr/local/android-sdk-linux
     JAVA_OPTS: "-Xmx1048m -XX:MaxPermSize=512m"
 
-  dependencies:
-    pre:
+dependencies:
+  pre:
 #      - echo y | android update sdk --no-ui --filter android-23,build-tools-23.0.1
 #      - echo y | android update sdk --no-ui --all --filter extra-google-google_play_services
-    override:
+  override:
 #      - ./gradlew dependencies
 
-  checkout:
-    post:
-      - cp hoge2 huga 
+checkout:
+  post:
+    - cp hoge2 huga 
 #  test:
 #    override:
 #    - ./gradlew test
 
-  deployment:
-    staging:
+deployment:
+  staging:
 #      branch: master
 # commands:
 #       - bundle exec fastlane beta
