@@ -19,8 +19,8 @@ test:
   override:
     - ./gradlew test
 
-deployment:
-  master:
-    branch: master
+#deployment:
+#  master:
+#    branch: master
 #commands:
 #    - bundle exec fastlane beta
