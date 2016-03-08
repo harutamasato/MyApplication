@@ -7,19 +7,20 @@ machine:
 
   dependencies:
     pre:
-      - echo y | android update sdk --no-ui --filter android-23,build-tools-23.0.1
-      - echo y | android update sdk --no-ui --all --filter extra-google-google_play_services
-    override:
-      - ./gradlew dependencies
+      - npm install coffeescript # install from a different package manager
+#  dependencies:
+#    pre:
+#      - echo y | android update sdk --no-ui --filter android-23,build-tools-23.0.1
+#      - echo y | android update sdk --no-ui --all --filter extra-google-google_play_services
+#    override:
+#      - ./gradlew dependencies
 
   test:
     override:
-    - git clone git@github.com:harutamasato/ApiApplication.git .
-    - echo "Nothing to do here"
     - ./gradlew test
 
   deployment:
-    master:
+    staging:
       branch: master
-      commands:
-       - bundle exec fastlane beta
+# commands:
+#       - bundle exec fastlane beta
