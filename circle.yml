@@ -22,5 +22,5 @@ test:
 deployment:
   master:
     branch: master
-  commands:
-    - bundle exec fastlane beta
+#commands:
+#    - bundle exec fastlane beta
