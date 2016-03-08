@@ -7,20 +7,20 @@ machine:
 
 dependencies:
   pre:
-#      - echo y | android update sdk --no-ui --filter android-23,build-tools-23.0.1
-#      - echo y | android update sdk --no-ui --all --filter extra-google-google_play_services
+    - echo y | android update sdk --no-ui --filter android-23,build-tools-23.0.1
+    - echo y | android update sdk --no-ui --all --filter extra-google-google_play_services
   override:
-#      - ./gradlew dependencies
+    - ./gradlew dependencies
 
 checkout:
   post:
     - cp hoge2 huga 
-#  test:
-#    override:
-#    - ./gradlew test
+test:
+  override:
+    - ./gradlew test
 
 deployment:
-  staging:
-#      branch: master
-# commands:
-#       - bundle exec fastlane beta
+  master:
+    branch: master
+  commands:
+    - bundle exec fastlane beta
