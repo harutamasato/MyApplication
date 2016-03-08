@@ -17,10 +17,10 @@ checkout:
     - cp hoge2 huga 
 test:
   override:
-    - ./gradlew test
+#- ./gradlew test
 
 deployment:
   beta:
     branch: master
     commands:
-      - bundle exec fastlane beta
+      - fastlane beta
