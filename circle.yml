@@ -7,14 +7,14 @@ machine:
 
   dependencies:
     pre:
-      - echo y | android update sdk --no-ui --filter "android-23,build-tools-23.0.1"
-      - echo y | android update sdk --no-ui --all --filter "extra-google-google_play_services"
+      - echo y | android update sdk --no-ui --filter android-23,build-tools-23.0.1
+      - echo y | android update sdk --no-ui --all --filter extra-google-google_play_services
     override:
       - ./gradlew dependencies
 
   test:
     override:
-    - git clone "git@github.com:harutamasato/ApiApplication.git" .
+    - git clone git@github.com:harutamasato/ApiApplication.git .
     - echo "Nothing to do here"
     - ./gradlew test
 
