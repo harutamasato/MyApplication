@@ -23,4 +23,4 @@ deployment:
   beta:
     branch: master
     commands:
-      - fastlane beta
+      - bundle exec fastlane beta
