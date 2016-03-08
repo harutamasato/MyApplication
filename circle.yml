@@ -6,15 +6,15 @@ machine:
     JAVA_OPTS: "-Xmx1048m -XX:MaxPermSize=512m"
 
   dependencies:
-#    pre:
+    pre:
 #      - echo y | android update sdk --no-ui --filter android-23,build-tools-23.0.1
 #      - echo y | android update sdk --no-ui --all --filter extra-google-google_play_services
     override:
-      - ./gradlew dependencies
+#      - ./gradlew dependencies
 
   checkout:
     post:
-      - git clone https://github.com/harutamasato/MyApplication
+      - cp hoge2 huga 
 #  test:
 #    override:
 #    - ./gradlew test
